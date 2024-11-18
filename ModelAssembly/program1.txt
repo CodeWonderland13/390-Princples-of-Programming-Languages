@@ -1,0 +1,55 @@
+; 
+; Class: CS390 Model Assembler Program Template
+; Author: Selinde Tatum
+; Program Description: Program that Reads the input of the number of pennies by the user,
+; stores and find the remainder to display the number 
+; of dollars and cents left over.
+; 
+;  input values list: item1, ..., itemN
+;  output values list: item1, ..., itemN
+;  test cases: I - input, O - output
+;  I: (x, y, z) ; O (a, b)         --  (un)expected result
+;  
+;  Memory Location Usage:
+;  M00 --> M?? -- Storage for Program
+;  M13 - storage for input event
+;  M12- possibly storage for constant used in calculation
+;  M14 - possibly storage for output of calculation
+;  M14 - possibly storage for output of calculation
+;
+;
+INP 13  ; Read number of pennies 
+LDB 12  ; Get constant from M9  
+LDA 13  ; Save Input to Register A
+DIV     ; Divide by 100
+STR 14  ; Store dollar amount
+PNT 14  ; Print out dollar amount
+LDB 12  ; Constant for Register B 
+MOD     ; Modulate to find cents
+STR 15  ; Store cent amount
+PNT 15  ; Print cent amount
+STP
+15      ; Filler
+100
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0

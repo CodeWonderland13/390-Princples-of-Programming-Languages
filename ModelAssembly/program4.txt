@@ -1,0 +1,55 @@
+; 
+; Class: CS390 Model Assembler Program Template
+; Author: <insert Student Name here>
+; Program Description: This program inputs the gas mileage, ending gas mileage
+; and numbers of gallons, the program subtracts and divides to find the 
+; total gas mileage. 
+;   
+;  input values list: item1, ..., itemN
+;  output values list: item1, ..., itemN
+;  test cases: I - input, O - output
+;  I: (x, y, z) ; O (a, b)         --  (un)expected result
+;  
+;  Memory Location Usage:
+;  M00 --> M?? -- Storage for Program
+;  M13 - storage for input event
+;  M14 - storage for input event
+;  M15 - storage for input event
+;  M16 - possibly storage for output of calculation
+;  M17 - possibly storage for output of calculation
+;
+INP 13 ; Gas Mileage 
+INP 14 ; Ending Mileage 
+INP 15 ; Number of gallons
+LDA 14 ; Ending Mileage as Register A
+LDB 13 ; Gas Mileage as Register B
+SUB  
+STR 16 ; Store total from subtraction
+LDA 16 ; Use total as Register A 
+LDB 15 ; Number of gallons as Register B 
+DIV
+STR 17 ; Store total from division
+PNT 17
+STP 
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0

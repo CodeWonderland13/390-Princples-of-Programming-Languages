@@ -1,0 +1,74 @@
+;
+; Class: CS390 Model Assembler Program Template
+; Author: <insert Student Name here>
+; Program Description: Ihree numbers for the user, the program adds
+; and multiplies all the numbers and displays the sum and product
+;   
+;  input values list: item1, ..., itemN
+;  output values list: item1, ..., itemN
+;  test cases: I - input, O - output
+;  I: (x, y, z) ; O (a, b)         --  (un)expected result
+;  
+;  Memory Location Usage:
+;  M00 --> M?? -- Storage for Program
+;  M22 - storage for input event
+;  M23 - storage for input event
+;  M24 - storage for input event 
+;  M25 - possibly storage for output of calculation
+;  M26 - possibly storage for output of calculation
+;  M27 - possibly storage for output of calculation
+;  M29 - possibly storage for output of calculation
+;  M28 - possibly storage for output of calculation
+;
+INP 22  ; Read first number
+INP 23  ; Read second number
+INP 24  ; Read third number
+LDA 22  ; Store to Register A
+LDB 23  ; Store to Register B
+ADD
+STR 25  ; Store Addition to Register B 
+LDA 24  ; Store to register A
+ADD
+STR 26  ; Store Sum to Register B
+PNT 26  ; Display Sum
+LDA 22  ; Store to Register A
+LDB 23  ; Store to Register B
+MUL
+STR 27  ; Store product to Register B 
+LDA 24  ; Store to register A
+MUL
+STR 28  ;Store Addition to Register B
+PNT 28  ;Display product
+STP
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0

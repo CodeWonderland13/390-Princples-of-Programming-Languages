@@ -1,0 +1,55 @@
+; 
+; Class: CS390 Model Assembler Program Template
+; Author: <insert Student Name here>
+; Program Description: This Program find the cost of the group
+; for a movie. It multiplies and adds the children and adults to display
+; a lump sum.
+;   
+;  input values list: item1, ..., itemN
+;  output values list: item1, ..., itemN
+;  test cases: I - input, O - output
+;  I: (x, y, z) ; O (a, b)         --  (un)expected result
+;  
+;  Memory Location Usage:
+;  M00 --> M?? -- Storage for Program
+;  M18 - storage for input event
+;  M19 - storage for input event
+;  M38 - possibly storage for constant used in calculation
+;  M39 - possibly storage for constant used in calculation
+;  M30 - possibly storage for constant used in calculation
+;  M20 - possibly storage for output of calculation
+;  M21 - possibly storage for output of calculation
+;  M22 - possibly storage for output of calculation
+;
+INP 18  ; Read how many children
+INP 19  ; Read how many adults
+LDA 18  ; Store to Register A
+LDB 16  ; Use constant as Register B 
+MUL  
+STR 20  ; Store 
+LDA 19  ; Store adults to register A
+LDB 17  ; Use constant as Register B 
+MUL
+STR 21  ; Store
+LDA 20  ; Store child amount to register A
+LDB 21  ; Store Adult amount to Regsiter B
+ADD   
+STR 22  ; Store
+PNT 22
+STP 
+6
+12
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0

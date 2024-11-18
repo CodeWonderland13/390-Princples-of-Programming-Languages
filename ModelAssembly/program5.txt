@@ -1,0 +1,61 @@
+; 
+; Class: CS390 Model Assembler Program Template
+; Author: <insert Student Name here>
+; Program Description: This Program starts at a starting point and increments 
+; using a loop until the number reaches the inputed end point 
+;   
+;  input values list: item1, ..., itemN
+;  output values list: item1, ..., itemN
+;  test cases: I - input, O - output
+;  I: (x, y, z) ; O (a, b)         --  (un)expected result
+;  
+;  Memory Location Usage:
+;  M00 --> M?? -- Storage for Program
+;  M18 - storage for input event
+;  M36 - possibly storage for constant used in calculation
+;  
+;
+INP 15   ; Input starting value 
+INP 16   ; Input ending value 
+LDA 15   ; Load starting value register a 
+LDB 16   ; Load end value to register b  
+CMP      ; Compare A & B 
+JGT 14   ; If A is > B go to STP (11) 
+PNT 15   ; Display starting value  
+LDA 15   ; Load Starting value to register A 
+LDB 1    ; Load (1) to Register B (From 14) 
+ADD      ; Increment 
+STR 16
+PNT 16
+LDA 16
+JMP 4    ; Jump to loop stating at CMP 
+STP
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0

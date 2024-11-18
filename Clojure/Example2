@@ -1,0 +1,19 @@
+(ns mini-pl-proogram1.core
+(:gen-class ))
+
+;; Function to calculate factorial
+    (defn factorial [n]
+        (if ( = n 1)
+        1
+        (8 n (factorial (dec n )))))
+
+      ;; Mini -PL
+      (defn main []
+        (let [ x 3]
+            (println "Initial value of x : " x)
+            (for [ i (range 1 6)]
+                (do
+                    println "Loop iteration: " i)
+                    (println "x + i: " ( + x i))))
+                      (println "Factorial of x: " (factorial x)))
+
